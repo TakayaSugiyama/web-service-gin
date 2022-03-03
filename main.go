@@ -2,6 +2,7 @@ package main
 
 import (
 	"net/http"
+	"os"
 
 	"github.com/gin-gonic/gin"
 )
@@ -44,10 +45,10 @@ func getAlbumByID(c *gin.Context) {
 }
 
 func main() {
+	port := os.Getenv("PORT")
 	router := gin.Default()
 	router.GET("/albums", getAlbums)
 	router.GET("/albums/:id", getAlbumByID)
 	router.POST("/albums", postAlbums)
-
-	router.Run(":8080")
+	router.Run(":" + port)
 }
