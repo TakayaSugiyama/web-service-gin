@@ -44,8 +44,16 @@ func getAlbumByID(c *gin.Context) {
 	c.IndentedJSON(http.StatusNotFound, gin.H{"message": "album not found"})
 }
 
+func setPortandGinMode() string {
+	if value, ok := os.LookupEnv("PORT"); ok {
+		gin.SetMode(gin.ReleaseMode)
+		return value
+	}
+	return "8080"
+}
+
 func main() {
-	port := os.Getenv("PORT")
+	port := setPortandGinMode()
 	router := gin.Default()
 	router.GET("/albums", getAlbums)
 	router.GET("/albums/:id", getAlbumByID)
