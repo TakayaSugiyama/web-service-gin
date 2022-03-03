@@ -50,5 +50,7 @@ func main() {
 	router.GET("/albums", getAlbums)
 	router.GET("/albums/:id", getAlbumByID)
 	router.POST("/albums", postAlbums)
+
+	gin.SetMode(gin.ReleaseMode)
 	router.Run(":" + port)
 }
