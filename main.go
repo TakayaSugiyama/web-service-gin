@@ -67,12 +67,6 @@ func setPortandGinMode() string {
 
 func main() {
 	port := setPortandGinMode()
-	router := gin.Default()
-	router.GET("/albums", getAlbums)
-	router.GET("/albums/:id", getAlbumByID)
-	router.DELETE("/albums/:id", deleteAlbumByID)
-	router.POST("/albums", postAlbums)
-
-	gin.SetMode(gin.ReleaseMode)
+	initRoutes()
 	router.Run(":" + port)
 }
