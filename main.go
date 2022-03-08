@@ -4,17 +4,11 @@ import (
 	"net/http"
 	"os"
 
+	"github.com/TakayaSugiyama/web-service-gin/model"
 	"github.com/gin-gonic/gin"
 )
 
-type album struct {
-	ID     string  `json:"id"`
-	Title  string  `json:"title"`
-	Artist string  `json:"artist"`
-	Price  float64 `json:"price"`
-}
-
-var albums = []album{
+var albums = []model.Album{
 	{ID: "1", Title: "Blue Train", Artist: "John Coltrance", Price: 56.99},
 	{ID: "2", Title: "Jeru", Artist: "John Coltrance", Price: 17.99},
 	{ID: "3", Title: "Sarah Vaughan and Clifford Brown", Artist: "Sarah Vaughan", Price: 39.99},
@@ -25,7 +19,7 @@ func getAlbums(c *gin.Context) {
 }
 
 func postAlbums(c *gin.Context) {
-	var newAlbum album
+	var newAlbum model.Album
 	if err := c.BindJSON(&newAlbum); err != nil {
 		return
 	}
@@ -47,7 +41,7 @@ func getAlbumByID(c *gin.Context) {
 func deleteAlbumByID(c *gin.Context) {
 	id := c.Param("id")
 
-	newAlbums := []album{}
+	newAlbums := []model.Album{}
 	for _, a := range albums {
 		if a.ID != id {
 			newAlbums = append(newAlbums, a)
