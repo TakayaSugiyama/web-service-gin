@@ -4,3 +4,7 @@ build:
 	docker build -t gin-service .
 exec:
 	docker exec -it gin-service sh
+push:
+	heroku container:push web
+release:
+	heroku container:release web

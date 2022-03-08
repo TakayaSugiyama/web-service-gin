@@ -8,9 +8,9 @@ import (
 )
 
 var albums = []model.Album{
-	{ID: "1", Title: "Blue Train", Artist: "John Coltrance", Price: 56.99},
-	{ID: "2", Title: "Jeru", Artist: "John Coltrance", Price: 17.99},
-	{ID: "3", Title: "Sarah Vaughan and Clifford Brown", Artist: "Sarah Vaughan", Price: 39.99},
+	{ID: "1", Title: "Blue Train", Artist: "HKT48", Price: 56.99},
+	{ID: "2", Title: "Jeru", Artist: "HKT48", Price: 17.99},
+	{ID: "3", Title: "Sarah Vaughan and Clifford Brown", Artist: "HKT48", Price: 39.99},
 }
 
 func GetAlbums(c *gin.Context) {
