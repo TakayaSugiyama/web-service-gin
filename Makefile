@@ -16,12 +16,12 @@ execdb:
 	docker exec -it gin-service-db bash
 migrateup:
 	migrate -database="mysql://ginuser:password@tcp(localhost:3307)/gin-service"\
-	-path "./db/migrations"\
-	--verbose up
+	       	-path "./db/migrations"\
+				 	--verbose up
 migratedown:
 	migrate -database="mysql://ginuser:password@tcp(localhost:3307)/gin-service"\
-	-path "./db/migrations"\
-	--verbose down
+	       	-path "./db/migrations"\
+				 	--verbose down
 push:
 	heroku container:push web
 release:
