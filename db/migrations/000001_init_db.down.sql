@@ -1,2 +1,2 @@
- DROP TABLE members;
- DROP TABLE teams;
+DROP TABLE IF EXISTS members;
+DROP TABLE IF EXISTS teams;
