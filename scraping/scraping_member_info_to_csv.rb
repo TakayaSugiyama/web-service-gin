@@ -6,8 +6,8 @@ require 'csv'
 require 'smarter_csv'
 
 result = []
-csvs = SmarterCSV.process("./member.csv")
-csvs.each do |csv|
+csvs = SmarterCSV.process('./member.csv')
+csvs.each.with_index do |csv, index|
   link = csv[:profile_link]
   response = HTTParty.get(link)
   body = response.body
@@ -21,7 +21,7 @@ csvs.each do |csv|
   name = profile.css('.name_j').text
   data[:name] = name
 
-  profile_doc = profile.css("dl dd")
+  profile_doc = profile.css('dl dd')
 
   nickname = profile_doc[0].text
   data[:nickname] = nickname
@@ -38,13 +38,13 @@ csvs.each do |csv|
   data[:hobby] = profile_doc[5].text
   data[:special_skill] = profile_doc[6].text
   data[:best_feature] = profile_doc[7].text
+  data[:member_id] = index + 1
   result << data
 end
 
-CSV.open("member_info.csv", "w") do |csv|
+CSV.open('member_info.csv', 'w') do |csv|
   csv << result.first.keys
   result.each do |r|
     csv << r.values
   end
 end
-
