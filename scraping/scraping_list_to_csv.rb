@@ -35,15 +35,15 @@ def get_team_name(index, team_info)
 end
 
 CSV.open('team.csv', 'w') do |csv|
-  csv << %w[team_name num_member]
+  csv << %w[team_name member_count]
   team_info.each do |team|
     csv << team.to_a
   end
 end
 
 CSV.open('member.csv', 'w') do |csv|
-  csv << %w[num name profile_link team_name]
+  csv << %w[name profile_link team_name]
   html_doc.css('.profile_list ul li a').each_with_index do |member, index|
-    csv << [index + 1, member.text, "http://www.hkt48.jp#{member['href']}", get_team_name(index, team_info)]
+    csv << [member.text, "http://www.hkt48.jp#{member['href']}", get_team_name(index, team_info)]
   end
 end

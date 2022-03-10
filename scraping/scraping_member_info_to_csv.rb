@@ -25,6 +25,7 @@ csvs.each do |csv|
 
   nickname = profile_doc[0].text
   data[:nickname] = nickname
+  data[:image_link] = image_link
 
   birthday = profile_doc[1].text.scan(/(\d+)年(\d+)月(\d+)日/).flatten.map(&:to_i)
   data[:birthday_year] = birthday[0]
