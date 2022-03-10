@@ -30,7 +30,7 @@ def get_team_name(index, team_info)
   additional_counts.each.with_index do |count, i|
     next if index + 1 > count
 
-    return team_info.keys[i]
+    return i + 1
   end
 end
 
@@ -42,7 +42,7 @@ CSV.open('team.csv', 'w') do |csv|
 end
 
 CSV.open('member.csv', 'w') do |csv|
-  csv << %w[name profile_link team_name]
+  csv << %w[name profile_link team_id]
   html_doc.css('.profile_list ul li a').each_with_index do |member, index|
     csv << [member.text, "http://www.hkt48.jp#{member['href']}", get_team_name(index, team_info)]
   end

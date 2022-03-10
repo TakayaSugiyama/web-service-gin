@@ -1,45 +1,45 @@
-name,profile_link,team_name
-秋吉 優花YUKA AKIYOSHI,http://www.hkt48.jp/profile/23,Team H
-伊藤 優絵瑠YUERU ITO,http://www.hkt48.jp/profile/71,Team H
-栗山 梨奈RINA KURIYAMA,http://www.hkt48.jp/profile/84,Team H
-神志那 結衣YUI KOJINA,http://www.hkt48.jp/profile/33,Team H
-坂口 理子RIKO SAKAGUCHI,http://www.hkt48.jp/profile/36,Team H
-坂本 りのRINO SAKAMOTO,http://www.hkt48.jp/profile/86,Team H
-田島 芽瑠MERU TASHIMA,http://www.hkt48.jp/profile/37,Team H
-田中 美久MIKU TANAKA,http://www.hkt48.jp/profile/48,Team H
-豊永 阿紀AKI TOYONAGA ,http://www.hkt48.jp/profile/67,Team H
-松岡 菜摘NATSUMI MATSUOKA,http://www.hkt48.jp/profile/11,Team H
-水上 凜巳花RIMIKA MIZUKAMI,http://www.hkt48.jp/profile/90,Team H
-村上 和叶WAKANA MURAKAMI,http://www.hkt48.jp/profile/91,Team H
-矢吹 奈子NAKO YABUKI,http://www.hkt48.jp/profile/51,Team H
-渡部 愛加里AKARI WATANABE,http://www.hkt48.jp/profile/75,Team H
-石橋 颯IBUKI ISHIBASHI,http://www.hkt48.jp/profile/78,Team KIV
-市村 愛里AIRI ICHIMURA,http://www.hkt48.jp/profile/79,Team KIV
-今田 美奈MINA IMADA,http://www.hkt48.jp/profile/18,Team KIV
-運上 弘菜HIRONA UNJO,http://www.hkt48.jp/profile/60,Team KIV
-川平 聖HIJIRI KAWAHIRA,http://www.hkt48.jp/profile/82,Team KIV
-熊沢 世莉奈SERINA KUMAZAWA,http://www.hkt48.jp/profile/3,Team KIV
-下野 由貴YUKI SHIMONO,http://www.hkt48.jp/profile/6,Team KIV
-竹本 くるみKURUMI TAKEMOTO,http://www.hkt48.jp/profile/87,Team KIV
-田中 伊桜莉IORI TANAKA,http://www.hkt48.jp/profile/88,Team KIV
-地頭江 音々NENE JITOE,http://www.hkt48.jp/profile/65,Team KIV
-長野 雅MIYABI NAGANO,http://www.hkt48.jp/profile/89,Team KIV
-馬場 彩華SAYAKA BABA,http://www.hkt48.jp/profile/73,Team KIV
-渕上 舞MAI FUCHIGAMI,http://www.hkt48.jp/profile/42,Team KIV
-本村 碧唯AOI MOTOMURA,http://www.hkt48.jp/profile/14,Team KIV
-荒巻 美咲MISAKI ARAMAKI,http://www.hkt48.jp/profile/45,Team TII
-今村 麻莉愛MARIA IMAMURA,http://www.hkt48.jp/profile/56,Team TII
-小田 彩加AYAKA ODA,http://www.hkt48.jp/profile/61,Team TII
-栗原 紗英SAE KURIHARA,http://www.hkt48.jp/profile/46,Team TII
-後藤 陽菜乃HINANO GOTO,http://www.hkt48.jp/profile/85,Team TII
-堺 萌香MOEKA SAKAI,http://www.hkt48.jp/profile/62,Team TII
-坂本 愛玲菜ERENA SAKAMOTO,http://www.hkt48.jp/profile/47,Team TII
-石 安伊AI SEKI,http://www.hkt48.jp/profile/72,Team TII
-武田 智加TOMOKA TAKEDA,http://www.hkt48.jp/profile/64,Team TII
-外薗 葉月HAZUKI HOKAZONO,http://www.hkt48.jp/profile/50,Team TII
-松岡 はなHANA MATSUOKA,http://www.hkt48.jp/profile/57,Team TII
-松本 日向HINATA MATSUMOTO ,http://www.hkt48.jp/profile/68,Team TII
-宮崎 想乃SONO MIYAZAKI,http://www.hkt48.jp/profile/69,Team TII
-村川 緋杏BIBIAN MURAKAWA,http://www.hkt48.jp/profile/58,Team TII
-山内 祐奈YUNA YAMAUCHI,http://www.hkt48.jp/profile/52,Team TII
-山下 エミリーEMIRI YAMASHITA,http://www.hkt48.jp/profile/53,Team TII
+name,profile_link,team_id
+秋吉 優花YUKA AKIYOSHI,http://www.hkt48.jp/profile/23,1
+伊藤 優絵瑠YUERU ITO,http://www.hkt48.jp/profile/71,1
+栗山 梨奈RINA KURIYAMA,http://www.hkt48.jp/profile/84,1
+神志那 結衣YUI KOJINA,http://www.hkt48.jp/profile/33,1
+坂口 理子RIKO SAKAGUCHI,http://www.hkt48.jp/profile/36,1
+坂本 りのRINO SAKAMOTO,http://www.hkt48.jp/profile/86,1
+田島 芽瑠MERU TASHIMA,http://www.hkt48.jp/profile/37,1
+田中 美久MIKU TANAKA,http://www.hkt48.jp/profile/48,1
+豊永 阿紀AKI TOYONAGA ,http://www.hkt48.jp/profile/67,1
+松岡 菜摘NATSUMI MATSUOKA,http://www.hkt48.jp/profile/11,1
+水上 凜巳花RIMIKA MIZUKAMI,http://www.hkt48.jp/profile/90,1
+村上 和叶WAKANA MURAKAMI,http://www.hkt48.jp/profile/91,1
+矢吹 奈子NAKO YABUKI,http://www.hkt48.jp/profile/51,1
+渡部 愛加里AKARI WATANABE,http://www.hkt48.jp/profile/75,1
+石橋 颯IBUKI ISHIBASHI,http://www.hkt48.jp/profile/78,2
+市村 愛里AIRI ICHIMURA,http://www.hkt48.jp/profile/79,2
+今田 美奈MINA IMADA,http://www.hkt48.jp/profile/18,2
+運上 弘菜HIRONA UNJO,http://www.hkt48.jp/profile/60,2
+川平 聖HIJIRI KAWAHIRA,http://www.hkt48.jp/profile/82,2
+熊沢 世莉奈SERINA KUMAZAWA,http://www.hkt48.jp/profile/3,2
+下野 由貴YUKI SHIMONO,http://www.hkt48.jp/profile/6,2
+竹本 くるみKURUMI TAKEMOTO,http://www.hkt48.jp/profile/87,2
+田中 伊桜莉IORI TANAKA,http://www.hkt48.jp/profile/88,2
+地頭江 音々NENE JITOE,http://www.hkt48.jp/profile/65,2
+長野 雅MIYABI NAGANO,http://www.hkt48.jp/profile/89,2
+馬場 彩華SAYAKA BABA,http://www.hkt48.jp/profile/73,2
+渕上 舞MAI FUCHIGAMI,http://www.hkt48.jp/profile/42,2
+本村 碧唯AOI MOTOMURA,http://www.hkt48.jp/profile/14,2
+荒巻 美咲MISAKI ARAMAKI,http://www.hkt48.jp/profile/45,3
+今村 麻莉愛MARIA IMAMURA,http://www.hkt48.jp/profile/56,3
+小田 彩加AYAKA ODA,http://www.hkt48.jp/profile/61,3
+栗原 紗英SAE KURIHARA,http://www.hkt48.jp/profile/46,3
+後藤 陽菜乃HINANO GOTO,http://www.hkt48.jp/profile/85,3
+堺 萌香MOEKA SAKAI,http://www.hkt48.jp/profile/62,3
+坂本 愛玲菜ERENA SAKAMOTO,http://www.hkt48.jp/profile/47,3
+石 安伊AI SEKI,http://www.hkt48.jp/profile/72,3
+武田 智加TOMOKA TAKEDA,http://www.hkt48.jp/profile/64,3
+外薗 葉月HAZUKI HOKAZONO,http://www.hkt48.jp/profile/50,3
+松岡 はなHANA MATSUOKA,http://www.hkt48.jp/profile/57,3
+松本 日向HINATA MATSUMOTO ,http://www.hkt48.jp/profile/68,3
+宮崎 想乃SONO MIYAZAKI,http://www.hkt48.jp/profile/69,3
+村川 緋杏BIBIAN MURAKAWA,http://www.hkt48.jp/profile/58,3
+山内 祐奈YUNA YAMAUCHI,http://www.hkt48.jp/profile/52,3
+山下 エミリーEMIRI YAMASHITA,http://www.hkt48.jp/profile/53,3
