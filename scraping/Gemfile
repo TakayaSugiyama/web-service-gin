@@ -11,3 +11,5 @@ gem 'nokogiri', '~> 1.13'
 gem 'rubocop', '~> 1.25'
 
 gem 'csv', '~> 3.2'
+
+gem 'smarter_csv', '~> 1.4'
