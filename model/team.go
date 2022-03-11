@@ -1,6 +1,7 @@
 package model
 
 import (
+	"database/sql"
 	"fmt"
 	"time"
 
@@ -36,4 +37,14 @@ func GetTeams() ([]Team, error) {
 	}
 	fmt.Println(teams)
 	return teams, nil
+}
+
+func GetTeam(id string) (Team, error) {
+	var team Team
+	db := db.ConnectDB()
+	err := db.QueryRow("SELECT * FROM teams WHERE id = ?", id).Scan(&team.ID, &team.Name, &team.TeamCount, &team.CreatedAt, &team.UpdatedAt)
+	if err != nil && err != sql.ErrNoRows {
+		panic(err)
+	}
+	return team, err
 }

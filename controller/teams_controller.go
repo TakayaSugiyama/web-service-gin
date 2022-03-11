@@ -1,6 +1,7 @@
 package controller
 
 import (
+	"database/sql"
 	"net/http"
 
 	"github.com/TakayaSugiyama/web-service-gin/model"
@@ -8,39 +9,25 @@ import (
 )
 
 func TeamIndex(c *gin.Context) {
-	teams, _ := model.GetTeams()
+	teams, err := model.GetTeams()
+	if err != nil {
+		panic(err)
+	}
 	c.IndentedJSON(http.StatusOK, teams)
 }
 
-//func TeamCreate(c *gin.Context) {
-//var newAlbum model.Album
-//if err := c.BindJSON(&newAlbum); err != nil {
-//return
-//}
-//albums = append(albums, newAlbum)
-//c.IndentedJSON(http.StatusCreated, newAlbum)
-//}
-
-//func TeamShow(c *gin.Context) {
-//id := c.Param("id")
-//for _, a := range albums {
-//if a.ID == id {
-//c.IndentedJSON(http.StatusOK, a)
-//return
-//}
-//}
-//c.IndentedJSON(http.StatusNotFound, gin.H{"message": "album not found"})
-//}
-
-//func TeamDestroy(c *gin.Context) {
-//id := c.Param("id")
-
-//newAlbums := []model.Album{}
-//for _, a := range albums {
-//if a.ID != id {
-//newAlbums = append(newAlbums, a)
-//}
-//}
-//albums = newAlbums
-//c.IndentedJSON(http.StatusOK, gin.H{"message": "album is deleted"})
-//}
+func TeamShow(c *gin.Context) {
+	var id = c.Param("id")
+	result, err := model.GetTeam(id)
+	if err != nil && err != sql.ErrNoRows {
+		panic(err)
+	}
+	if err == nil {
+		c.IndentedJSON(http.StatusOK, result)
+	} else {
+		c.JSON(http.StatusNotFound, gin.H{
+			"status":        http.StatusNotFound,
+			"error_message": "team is not found",
+		})
+	}
+}

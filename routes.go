@@ -9,7 +9,5 @@ var router *gin.Engine = gin.Default()
 
 func initRoutes() {
 	router.GET("/teams", controller.TeamIndex)
-	//router.GET("/albums/:id", controller.TeamShow)
-	//router.DELETE("/albums/:id", controller.TeamDestroy)
-	//router.POST("/albums", controller.TeamCreate)
+	router.GET("/teams/:id", controller.TeamShow)
 }
