@@ -7,7 +7,7 @@ import (
 )
 
 func ConnectDB() *sql.DB {
-	db, err := sql.Open("mysql", "ginuser:password@tcp(172.19.0.2:3306)/gin-service?parseTime=true")
+	db, err := sql.Open("mysql", "ginuser:password@tcp(gin_service_db:3306)/gin-service?parseTime=true")
 	if err != nil {
 		panic(err.Error())
 	}
