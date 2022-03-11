@@ -24,6 +24,7 @@ make migrateup
 Go(gin)のサーバーを構築する。
 
 ```
+make build
 make run
 ```
 
