@@ -8,8 +8,6 @@ import (
 var router *gin.Engine = gin.Default()
 
 func initRoutes() {
-	router.GET("/albums", controller.GetAlbums)
-	router.GET("/albums/:id", controller.GetAlbumByID)
-	router.DELETE("/albums/:id", controller.DeleteAlbumByID)
-	router.POST("/albums", controller.PostAlbums)
+	router.GET("/teams", controller.TeamIndex)
+	router.GET("/teams/:id", controller.TeamShow)
 }
