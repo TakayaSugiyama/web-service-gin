@@ -18,6 +18,7 @@ type Team struct {
 
 func GetTeams() ([]Team, error) {
 	db := db.ConnectDB()
+	defer db.Close()
 	rows, err := db.Query("SELECT * FROM teams;")
 	if err != nil {
 		return nil, err
@@ -42,6 +43,7 @@ func GetTeams() ([]Team, error) {
 func GetTeam(id string) (Team, error) {
 	var team Team
 	db := db.ConnectDB()
+	defer db.Close()
 	err := db.QueryRow("SELECT * FROM teams WHERE id = ?", id).Scan(&team.ID, &team.Name, &team.TeamCount, &team.CreatedAt, &team.UpdatedAt)
 	if err != nil && err != sql.ErrNoRows {
 		panic(err)

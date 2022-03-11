@@ -28,6 +28,7 @@ type MemberInfo struct {
 
 func GetMemberInfos() ([]MemberInfo, error) {
 	db := db.ConnectDB()
+	defer db.Close()
 	rows, err := db.Query("SELECT * FROM member_infos")
 	if err != nil {
 		return nil, err
@@ -52,6 +53,7 @@ func GetMemberInfos() ([]MemberInfo, error) {
 func GetMemberInfo(id string) (MemberInfo, error) {
 	var member MemberInfo
 	db := db.ConnectDB()
+	defer db.Close()
 	err := db.QueryRow("SELECT * FROM member_infos WHERE id = ?", id).Scan(&member.ID, &member.Name, &member.NickName, &member.ImageLinkURL, &member.BirthdayYear, &member.BirthdayMonth, &member.BirthdayDay,
 		&member.BloodType, &member.PlaceOfBirth, &member.Height, &member.Hobby, &member.SpecialSkill, &member.BestFeature, &member.MemberID, &member.CreatedAt, &member.UpdatedAt)
 	if err != nil && err != sql.ErrNoRows {

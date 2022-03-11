@@ -18,6 +18,7 @@ type Member struct {
 
 func GetMembers() ([]Member, error) {
 	db := db.ConnectDB()
+	defer db.Close()
 	rows, err := db.Query("SELECT * FROM members")
 	if err != nil {
 		return nil, err
@@ -41,6 +42,7 @@ func GetMembers() ([]Member, error) {
 func GetMember(id string) (Member, error) {
 	var member Member
 	db := db.ConnectDB()
+	defer db.Close()
 	err := db.QueryRow("SELECT * FROM members WHERE id = ?", id).Scan(&member.ID, &member.Name, &member.ProfileLink, &member.TeamID, &member.CreatedAt, &member.UpdatedAt)
 	if err != nil && err != sql.ErrNoRows {
 		panic(err)
