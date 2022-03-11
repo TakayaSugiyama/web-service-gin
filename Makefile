@@ -1,5 +1,7 @@
 run:
-	docker run -p 8080:8080 -it --rm --name gin-service gin-service
+	docker run -p 8080:8080 -it --rm --name gin-service\
+		-v ~/web-service-gin/:/app\
+		gin-service
 build:
 	docker build -t gin-service .
 exec:
