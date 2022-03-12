@@ -31,3 +31,19 @@ func TeamShow(c *gin.Context) {
 		})
 	}
 }
+
+func TeamMembers(c *gin.Context) {
+	var id = c.Param("id")
+	result, err := model.GetTeamMembers(id)
+	if err != nil && err != sql.ErrNoRows {
+		panic(err)
+	}
+	if err == nil && result != nil {
+		c.IndentedJSON(http.StatusOK, result)
+	} else {
+		c.JSON(http.StatusNotFound, gin.H{
+			"status":        http.StatusNotFound,
+			"error_message": "team or team members is not found",
+		})
+	}
+}
