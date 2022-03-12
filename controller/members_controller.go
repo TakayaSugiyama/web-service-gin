@@ -31,3 +31,11 @@ func MemberShow(c *gin.Context) {
 		})
 	}
 }
+
+func RandomMembers(c *gin.Context) {
+	members, err := model.GetRandomMembers()
+	if err != nil {
+		panic(err)
+	}
+	c.IndentedJSON(http.StatusOK, members)
+}
