@@ -21,7 +21,10 @@ buildcliant:
 runcliant:
 	docker run -p 3000:3000 -v ${PWD}/cliant:/usr/src/app\
 		--name gin-service-cliant  \
-		--rm  gin-service-cliant
+		--rm \
+		--network gin-service-network\
+		--hostname gin_service_cliant\
+		gin-service-cliant
 stopdb:
 	docker stop gin-service-db
 createnetwork:
