@@ -5,7 +5,7 @@ run:
 		--hostname gin_server\
 		gin-service
 build:
-	docker build -t gin-service .
+	docker build -t gin-service -f dockers/Dockerfile .
 exec:
 	docker exec -it gin-service sh
 rundb:
