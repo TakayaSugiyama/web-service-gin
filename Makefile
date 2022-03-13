@@ -1,6 +1,6 @@
 run:
 	docker run -p 8080:8080 -it --rm --name gin-service\
-		-v ~/web-service-gin/:/app\
+		-v ${PWD}/:/app\
 		--network gin-service-network\
 		--hostname gin_server\
 		gin-service
