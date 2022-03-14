@@ -39,3 +39,11 @@ func RandomMembers(c *gin.Context) {
 	}
 	c.IndentedJSON(http.StatusOK, members)
 }
+
+func RandomMember(c *gin.Context) {
+	member, err := model.GetRandomMember()
+	if err != nil {
+		panic(err)
+	}
+	c.IndentedJSON(http.StatusOK, member)
+}
