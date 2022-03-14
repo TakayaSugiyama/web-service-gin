@@ -28,6 +28,7 @@ func initRoutes() {
 	router.GET("/members", controller.MemberIndex)
 	router.GET("/members/:id", controller.MemberShow)
 	router.GET("/randommembers", controller.RandomMembers)
+	router.GET("/randommember", controller.RandomMember)
 	//メンバー詳細情報
 	router.GET("/memberdetails", controller.MemberInfoIndex)
 	router.GET("/memberdetails/:id", controller.MemberInfoShow)
