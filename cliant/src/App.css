@@ -8,6 +8,11 @@
   text-align: center;
 }
 
+.answer-count {
+  font-size: 18px;
+  text-align: center;
+}
+
 .question {
   display: flex;
   justify-content: center;
