@@ -1,6 +1,5 @@
 <img width="1181" alt="Screen Shot 2022-04-03 at 0 54 04" src="https://user-images.githubusercontent.com/44254887/161390987-ccb1ead5-c15e-4249-8889-706dc53dca02.png">
 
-
 ### 環境構築
 
 Docker と[golang-migrate](https://github.com/golang-migrate/migrate)を使用しているので入ってない場合は brew を使って入れる。
@@ -35,6 +34,13 @@ Go(gin)のサーバーを構築する。
 ```
 make build
 make run
+```
+
+クライアントを起動する。
+
+```
+make buildcliant
+make runcliant
 ```
 
 ### 参考
