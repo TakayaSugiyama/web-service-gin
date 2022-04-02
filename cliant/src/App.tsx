@@ -24,7 +24,7 @@ function App() {
       alert("正解です")
       setCorrectCount(correctCount+1)
     }else{
-      alert("不正解です")
+      alert(`不正解です。正解は${member.name}でした。`)
       setCorrectCount(0)
     }
     loadData()
