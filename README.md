@@ -1,3 +1,6 @@
+<img width="1147" alt="Screen Shot 2022-04-03 at 0 24 40" src="https://user-images.githubusercontent.com/44254887/161389996-5e122ae1-8a0f-4053-959c-24d0f9c35f01.png">
+
+
 ### 環境構築
 
 Docker と[golang-migrate](https://github.com/golang-migrate/migrate)を使用しているので入ってない場合は brew を使って入れる。
