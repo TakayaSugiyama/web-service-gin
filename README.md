@@ -1,4 +1,4 @@
-<img width="1147" alt="Screen Shot 2022-04-03 at 0 24 40" src="https://user-images.githubusercontent.com/44254887/161389996-5e122ae1-8a0f-4053-959c-24d0f9c35f01.png">
+<img width="1181" alt="Screen Shot 2022-04-03 at 0 54 04" src="https://user-images.githubusercontent.com/44254887/161390987-ccb1ead5-c15e-4249-8889-706dc53dca02.png">
 
 
 ### 環境構築
