@@ -1,6 +1,11 @@
 package model
 
-import "github.com/TakayaSugiyama/web-service-gin/db"
+import (
+	"math/rand"
+	"time"
+
+	"github.com/TakayaSugiyama/web-service-gin/db"
+)
 
 type TeamMember struct {
 	ID           int    `json:"id"`
@@ -60,6 +65,8 @@ func GetRandomMember() (TeamMember, []string, error) {
 		memberNames = append(memberNames, name)
 	}
 
+	rand.Seed(time.Now().UnixNano())
+	rand.Shuffle(len(memberNames), func(i, j int) { memberNames[i], memberNames[j] = memberNames[j], memberNames[i] })
 	return member, memberNames, err
 }
 
