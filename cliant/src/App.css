@@ -1,5 +1,36 @@
 .App {
+  padding: 100px;
+}
+
+.questin-title {
+  font-size: 40px;
+  font-weight: bold;
   text-align: center;
+}
+
+.question {
+  display: flex;
+  justify-content: center;
+}
+
+.memberOptions {
+  display: flex;
+  justify-content: center;
+}
+
+.memberOption:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.memberOption {
+  height: 100px;
+  width: 200px;
+  margin: 20px;
+  background-color: #f0f0f0;
+  text-align: center;
+  line-height: 100px;
+  border-radius: 50px;
 }
 
 .App-logo {
@@ -14,7 +45,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

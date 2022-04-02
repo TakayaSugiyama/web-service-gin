@@ -46,10 +46,12 @@ func GetRandomMember() (TeamMember, []string, error) {
 		name
 	FROM
 		member_infos
+    WHERE
+	    member_infos.member_id != ?
 	ORDER BY
 		RAND()
 	LIMIT 3
-	`)
+	`, member.ID)
 
 	if err != nil {
 		panic(err)
