@@ -10,15 +10,16 @@ type TeamMember struct {
 	ImageLinkUrl string `json:"image_link_url"`
 }
 
-func GetRandomMember() (TeamMember, error) {
+func GetRandomMember() (TeamMember, []string, error) {
 	db := db.ConnectDB()
 	defer db.Close()
 	var member TeamMember
+	var memberNames []string
 
 	err := db.QueryRow(`
 	SELECT
 		members.id,
-		members.name,
+		member_infos.name,
 		members.profile_link,
 		teams.name,
 		member_infos.image_link_url
@@ -30,10 +31,36 @@ func GetRandomMember() (TeamMember, error) {
 		RAND()
 	LIMIT 1
 	`).Scan(&member.ID, &member.Name, &member.ProfileLink, &member.TeamName, &member.ImageLinkUrl)
+
 	if err != nil {
 		panic(err)
 	}
-	return member, err
+
+	names, err := db.Query(`
+    SELECT
+		name
+	FROM
+		member_infos
+	ORDER BY
+		RAND()
+	LIMIT 3
+	`)
+
+	if err != nil {
+		panic(err)
+	}
+
+	memberNames = append(memberNames, member.Name)
+	for names.Next() {
+		var name string
+
+		if err := names.Scan(&name); err != nil {
+			panic(err)
+		}
+		memberNames = append(memberNames, name)
+	}
+
+	return member, memberNames, err
 }
 
 func GetRandomMembers() ([]TeamMember, error) {

@@ -4,7 +4,7 @@ import axios from 'axios'
 
 function App() {
   useEffect(() => {
-    axios.get("http://localhost:8080/randommembers")
+    axios.get("http://localhost:8080/randommember")
     .then((res) => {
       console.log(res.data)
     })
