@@ -4,12 +4,18 @@ import axios from 'axios'
 
 function App() {
   const [options, setOptions] = useState([])
-  const [member, setMember] = useState({image_link_url: "#", name: ""})
+  const [member, setMember] = useState({image_link_url: "#", name: "", id: 0})
   const [correctCount, setCorrectCount] = useState(0)
 
 
-  const loadData = async() => {
-    axios.get("http://localhost:8080/randommember")
+  const loadData = async(prevID?:number) => {
+    let url: string = ""
+    if(prevID === undefined){
+      url = `http://localhost:8080/randommember`
+    }else{
+      url = `http://localhost:8080/randommember?prevID=${prevID}`
+    }
+    axios.get(url)
     .then((res) => {
       setOptions(res.data.options)
       setMember(res.data.member)
@@ -27,7 +33,7 @@ function App() {
       alert(`不正解です。正解は${member.name}でした。`)
       setCorrectCount(0)
     }
-    loadData()
+    loadData(member.id)
   }
 
   useEffect(() => {

@@ -41,7 +41,8 @@ func RandomMembers(c *gin.Context) {
 }
 
 func RandomMember(c *gin.Context) {
-	member, names, err := model.GetRandomMember()
+	prevID := c.Query("prevID")
+	member, names, err := model.GetRandomMember(prevID)
 	if err != nil {
 		panic(err)
 	}
