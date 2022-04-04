@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import '../Problem.css';
 import axios from 'axios'
+import { Link  } from "react-router-dom";
+
 
 const Problem = () => {
   const [options, setOptions] = useState([])
@@ -46,6 +48,7 @@ const Problem = () => {
       <h2 className="answer-count">{ correctCount }問連続正解中</h2>
       <div className="question">
         <img src={member.image_link_url} alt="photo"/>
+        <Link to={`/members/${member.id}`} target="_blank">メンバーの情報を確認する</Link>
       </div>
       <div className="memberOptions">
         {

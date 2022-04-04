@@ -16,6 +16,12 @@
 .question {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+.question a {
+  margin-top: 5px;
 }
 
 .memberOptions {
