@@ -8,8 +8,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Problem/>} key="problem"/>
-        <Route path="/members/:id" element={<Member/>} key="member"/>
+        <Route path="/" element={<Problem/>}/>
+        <Route path="/members/:id" element={<Member/>}/>
       </Routes>
     </BrowserRouter>
   );

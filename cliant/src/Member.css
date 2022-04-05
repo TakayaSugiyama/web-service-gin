@@ -1,0 +1,23 @@
+.Profile {
+  padding-top: 50px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+dl {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-left: 50px;
+  border-bottom: dotted 1px #dfdfdf;
+}
+
+dt {
+  font-weight: bold;
+}
+
+.profile {
+  margin-left: 10px;
+}
