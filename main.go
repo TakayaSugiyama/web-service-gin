@@ -1,5 +1,9 @@
 package main
 
+import "github.com/TakayaSugiyama/web-service-gin/routes"
+
 func main() {
-	initRoutes()
+	router := routes.InitRoutes()
+	port := routes.SetPortandGinMode()
+	router.Run(":" + port)
 }

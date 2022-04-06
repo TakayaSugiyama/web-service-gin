@@ -1,4 +1,4 @@
-package main
+package routes
 
 import (
 	"os"
@@ -8,7 +8,7 @@ import (
 	cors "github.com/rs/cors/wrapper/gin"
 )
 
-func setPortandGinMode() string {
+func SetPortandGinMode() string {
 	if value, ok := os.LookupEnv("PORT"); ok {
 		gin.SetMode(gin.ReleaseMode)
 		return value
@@ -16,8 +16,7 @@ func setPortandGinMode() string {
 	return "8080"
 }
 
-func initRoutes() {
-	port := setPortandGinMode()
+func InitRoutes() *gin.Engine {
 	router := gin.Default()
 	router.Use(cors.Default())
 	//チーム情報
@@ -32,5 +31,5 @@ func initRoutes() {
 	//メンバー詳細情報
 	router.GET("/memberdetails", controller.MemberInfoIndex)
 	router.GET("/memberdetails/:id", controller.MemberInfoShow)
-	router.Run(":" + port)
+	return router
 }
