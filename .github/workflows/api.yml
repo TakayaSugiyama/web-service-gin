@@ -15,10 +15,10 @@ jobs:
         ports:
           - 3306:3306
         env:
-          MYSQL_USER=ginuser
-          MYSQL_PASSWORD=password
-          MYSQL_DATABASE=gin-service
-          MYSQL_ROOT_PASSWORD=password
+          MYSQL_USER: ginuser
+          MYSQL_PASSWORD: password
+          MYSQL_DATABASE: gin-service
+          MYSQL_ROOT_PASSWORD: password
     steps:
     - uses: actions/checkout@v2
     - name: Set up Go
