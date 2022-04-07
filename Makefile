@@ -16,6 +16,8 @@ rundb:
 		--network gin-service-network\
 		--hostname gin_service_db\
 		-d  mysql:8.0
+test:
+	docker exec gin-service go test -v
 buildcliant:
 	docker build -f dockers/Dockerfile.cliant -t gin-service-cliant ./cliant/
 runcliant:
