@@ -32,7 +32,7 @@ jobs:
         apt-get update
         apt-get install -y migrate
     - name: Run Migration
-      migrate --database="mysql://ginuser:password@tcp(localhost:3306)/gin-service" -path "./db/migrations"
+      run: migrate --database="mysql://ginuser:password@tcp(localhost:3306)/gin-service" -path "./db/migrations"
     - name: Build
       run: go build -v ./...
     - name: Test
