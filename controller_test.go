@@ -6,10 +6,12 @@ import (
 	"testing"
 
 	"github.com/TakayaSugiyama/web-service-gin/routes"
+	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/assert"
 )
 
 func TestMemberIndex(t *testing.T) {
+	gin.SetMode(gin.TestMode)
 	router := routes.InitRoutes()
 
 	w := httptest.NewRecorder()
@@ -20,6 +22,7 @@ func TestMemberIndex(t *testing.T) {
 }
 
 func TestMemberShow(t *testing.T) {
+	gin.SetMode(gin.TestMode)
 	router := routes.InitRoutes()
 
 	w := httptest.NewRecorder()
