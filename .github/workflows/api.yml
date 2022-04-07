@@ -7,12 +7,13 @@ on:
 
 jobs:
   build:
+    name: test
     runs-on: ubuntu-latest
     services:
       gin_service_db:
         image: mysql:8.0
         ports:
-          - 3307:3306
+          - 3306:3306
         env:
           MYSQL_USER=ginuser
           MYSQL_PASSWORD=password
@@ -31,7 +32,7 @@ jobs:
         apt-get update
         apt-get install -y migrate
     - name: Run Migration
-      migrate --database="mysql://ginuser:password@tcp(localhost:3307)/gin-service" -path "./db/migrations" --verbose up
+      migrate --database="mysql://ginuser:password@tcp(localhost:3306)/gin-service" -path "./db/migrations"
     - name: Build
       run: go build -v ./...
     - name: Test
