@@ -19,6 +19,7 @@ jobs:
           MYSQL_PASSWORD: password
           MYSQL_DATABASE: gin-service
           MYSQL_ROOT_PASSWORD: password
+          MYSQL_HOST: gin_service_db
     steps:
     - uses: actions/checkout@v2
     - name: Set up Go
@@ -37,6 +38,4 @@ jobs:
       run: go build -v ./...
     - name: Test
       run: go test -v ./...
-      env:
-        MYSQL_HOST: gin_service_db
 
