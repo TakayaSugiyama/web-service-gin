@@ -3,6 +3,7 @@ package main
 import (
 	"net/http"
 	"net/http/httptest"
+	"os"
 	"testing"
 
 	"github.com/TakayaSugiyama/web-service-gin/routes"
@@ -10,8 +11,13 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestMemberIndex(t *testing.T) {
+func TestMain(m *testing.M) {
 	gin.SetMode(gin.TestMode)
+	code := m.Run()
+	os.Exit(code)
+}
+
+func TestMemberIndex(t *testing.T) {
 	router := routes.InitRoutes()
 
 	w := httptest.NewRecorder()
@@ -22,7 +28,6 @@ func TestMemberIndex(t *testing.T) {
 }
 
 func TestMemberShow(t *testing.T) {
-	gin.SetMode(gin.TestMode)
 	router := routes.InitRoutes()
 
 	w := httptest.NewRecorder()
@@ -34,12 +39,11 @@ func TestMemberShow(t *testing.T) {
 }
 
 func TestMemberShowNotFound(t *testing.T) {
-	gin.SetMode(gin.TestMode)
-
 	router := routes.InitRoutes()
 	w := httptest.NewRecorder()
 	req, _ := http.NewRequest("GET", "/members/99", nil)
 	router.ServeHTTP(w, req)
+
 	assert.Equal(t, 404, w.Code)
 	assert.Equal(t, w.Body.String(), "{\"error_message\":\"member is not found\",\"status\":404}")
 }
