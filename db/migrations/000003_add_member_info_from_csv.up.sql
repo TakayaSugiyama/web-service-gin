@@ -14,9 +14,7 @@ CREATE TABLE IF NOT EXISTS member_infos(
   best_feature VARCHAR(255) NOT NULL,
   member_id INT NOT NULL,
   create_at Datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  update_at Datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-
-  FOREIGN KEY(member_id) REFERENCES members(id)
+  update_at Datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
 INSERT INTO `member_infos` (`place_of_birth`, `hobby`, `birthday_day`, `image_link_url`, `best_feature`, `birthday_month`, `special_skill`, `birthday_year`, `blood_type`, `name`, `nickname`, `height`, `member_id`) VALUES
