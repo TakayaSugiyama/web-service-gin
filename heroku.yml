@@ -1,0 +1,8 @@
+build:
+  docker:
+    web: dockers/Dockerfile
+  config:
+    GIN_MODE: "release"
+run:
+  web: /web-service-gin
+
