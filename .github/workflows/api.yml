@@ -34,7 +34,6 @@ jobs:
       run: migrate -database="mysql://ginuser:password@tcp(localhost:3306)/gin-service" -path "./db/migrations" --verbose up
     - name: Build
       run: go build -v ./...
-    - name: Test
   deploy:
     name: deploy
     needs: test
