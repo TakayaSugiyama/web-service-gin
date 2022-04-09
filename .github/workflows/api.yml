@@ -40,8 +40,7 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
       - name: deploy
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
