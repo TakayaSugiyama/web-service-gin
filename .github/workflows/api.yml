@@ -1,10 +1,8 @@
 name: Gin API
-
 on:
   push:
     branches:
       - main
-
 jobs:
   test:
     name: test
@@ -39,7 +37,7 @@ jobs:
     - name: Test
   deploy:
     name: deploy
-    needs: [test]
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
