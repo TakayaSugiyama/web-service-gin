@@ -1,6 +1,6 @@
 build:
   docker:
-    web: dockers/Dockerfile
+    web: Dockerfile
   config:
     GIN_MODE: "release"
 run:

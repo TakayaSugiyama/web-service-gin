@@ -5,7 +5,7 @@ run:
 		--hostname gin_server\
 		gin-service
 build:
-	docker build -t gin-service -f dockers/Dockerfile .
+	docker build -t gin-service .
 exec:
 	docker exec -it gin-service sh
 rundb:
@@ -19,7 +19,7 @@ rundb:
 test:
 	docker exec gin-service go test -v
 buildcliant:
-	docker build -f dockers/Dockerfile.cliant -t gin-service-cliant ./cliant/
+	docker build -f Dockerfile.cliant -t gin-service-cliant ./cliant/
 runcliant:
 	docker run -p 3000:3000 -v ${PWD}/cliant:/usr/src/app\
 		--name gin-service-cliant  \
