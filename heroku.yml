@@ -1,8 +1,6 @@
 build:
   docker:
     web: Dockerfile
-  config:
-    GIN_MODE: "release"
 run:
   web: /web-service-gin
 
